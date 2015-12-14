@@ -1,7 +1,7 @@
 <?php
 /**
  * RGraph Horizontal Bars class
- * @author Ricardo Obregón <ricardo@obregon.co>
+ * @author Ricardo Obregon <ricardo@obregon.co>
  * @date 19/04/12 05:30 PM
  */
 require_once('RGraphWidget.php');
