@@ -1,0 +1,17 @@
+{
+    "name": "klikar3/rgraph",
+    "type": "library",
+    "description": "Graphing with RGraph",
+    "keywords": ["rgraph"],
+    "homepage": "http://github.com/klikar3/yii2-rgraph",
+    "license": "GNU General Public License",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*", 
+        "phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
+        "phploc/phploc": "*",
+        "sebastian/phpcpd": "*"
+    },
+    "autoload": {
+        "psr-0": { "rgraph\\": ["/"] }
+    }
+}
