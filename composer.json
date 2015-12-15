@@ -5,13 +5,19 @@
     "keywords": ["rgraph"],
     "homepage": "http://github.com/klikar3/yii2-rgraph",
     "license": "GNU General Public License",
+	"require": {
+		"php": ">=5.4.0",
+		"lib-pcre": "*"
+	},
     "require-dev": {
         "phpunit/phpunit": "3.7.*", 
         "phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
         "phploc/phploc": "*",
         "sebastian/phpcpd": "*"
     },
-    "autoload": {
-        "psr-0": { "rgraph\\": ["/"] }
-    }
+	"autoload": {
+		"psr-4": {
+			"klikar3\\yii2-rgraph\\": ""
+		}
+	},
 }
