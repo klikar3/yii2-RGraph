@@ -26,24 +26,22 @@ class RGraphBar extends RGraphWidget
 			$id = $this->htmlOptions['id'];
 		else
 			$this->htmlOptions['id'] = $id;
-    if (!isset($this->options['id'])) {
-        $this->options['id'] = $id;
-    }
- //   $view = $this->getView();
+	    if (!isset($this->options['id'])) {
+	        $this->options['id'] = $id;
+	    }
     
- //   RGraphBar::register($view);
-	  parent::init();
-	  $this->registerScriptFile('RGraph.bar.js');
+	 	parent::init();
+		$this->registerScriptFile('RGraph.bar.js');
 	}
 
 	public function run()
 	{
 //    echo Html::tag('canvas', '', $this->options);		
-	  $id = $this->getId();
-      $view = $this->getView();
-
-	  $data = !empty($this->data) ? Json::encode($this->data) : '{}';;
-      $options = !empty($this->options) ? Json::encode($this->options) : '{}';
+		$id = $this->getId();
+	    $view = $this->getView();
+	
+		$data = !empty($this->data) ? Json::encode($this->data) : '{}';;
+	    $options = !empty($this->options) ? Json::encode($this->options) : '{}';
 		
 		$script = ";var $id = new RGraph.Bar('{$id}',{$data}).draw();";
 		$script .= $this->getEncodedOptions($id);

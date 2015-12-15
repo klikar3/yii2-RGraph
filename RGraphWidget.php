@@ -88,13 +88,13 @@ abstract class RGraphWidget extends Widget
 				}
 			}
 			if (!empty($tmpResult)) {
-				$result[$parent] = CJSON::encode($tmpResult);
+				$result[$parent] = Json::encode($tmpResult);
 			}
 		} else {
 			if ($parent === null) {
-				$result[] = CJSON::encode($options);
+				$result[] = Json::encode($options);
 			} else {
-				$result[$parent] = CJSON::encode($options);
+				$result[$parent] = Json::encode($options);
 			}
 		}
 		return $result;
