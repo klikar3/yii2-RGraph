@@ -2,7 +2,7 @@
 /**
  * @author Ricardo Obregón <ricardo@obregon.co>
  */
-abstract class RGraphWidget extends CWidget
+abstract class RGraphWidget extends Widget
 {
 	/**
 	 * RGraph path where css,images,libraries and scripts directory are present.
