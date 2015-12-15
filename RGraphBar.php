@@ -5,7 +5,7 @@
  * @date 19/04/12 05:30 PM
  */
 
-namespace robregonm\rgraph;
+namespace klikar3\rgraph;
 
 //use Yii;
 use yii\base\InvalidConfigException;
@@ -13,7 +13,7 @@ use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
-use robregonm\rgraph\RGraphWidget;
+use klikar3\rgraph\RGraphWidget;
 
 //require_once('RGraphWidget.php');
 
