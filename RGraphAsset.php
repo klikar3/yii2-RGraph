@@ -5,7 +5,7 @@
  * @date 19/04/12 05:30 PM
  */
 
-namespace klikar3/rgraph;
+namespace klikar3\rgraph;
 
 use yii\web\AssetBundle;
 
