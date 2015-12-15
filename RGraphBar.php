@@ -30,9 +30,10 @@ class RGraphBar extends RGraphWidget
         $this->options['id'] = $id;
     }
     $view = $this->getView();
-    RGraphBar::register($view);
+    
+ //   RGraphBar::register($view);
 		parent::init();
-//		$this->registerScriptFile('RGraph.bar.js');
+		$this->registerScriptFile('RGraph.bar.js');
 	}
 
 	public function run()
