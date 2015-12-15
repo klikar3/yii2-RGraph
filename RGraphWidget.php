@@ -2,13 +2,20 @@
 /**
  * @author Ricardo Obregón <ricardo@obregon.co>
  */
+
+namespace klikar3\rgraph;
+
+use Yii;
+use yii\base\InvalidCallException;
+use yii\base\Widget;
+ 
 abstract class RGraphWidget extends Widget
 {
 	/**
 	 * RGraph path where css,images,libraries and scripts directory are present.
 	 * @var string
 	 */
-	public $rGraphPath = 'application.vendors.RGraph';
+	public $rGraphPath = 'application.vendors.klikar3.rgraph.RGraph';
 	protected $rGraphUrl;
 
 	public $allowAdjusting = false;
