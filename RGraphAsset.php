@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
 
 class RGraphAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/klikar3/RGraph/RGraph';
+    public $sourcePath = '@vendor/klikar3/rgraph/RGraph';
     public $css = [
         'css/website.css','css/animations.css', 'css/ModalDialog.css'
     ];
