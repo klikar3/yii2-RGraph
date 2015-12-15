@@ -19,5 +19,5 @@
 		"psr-4": {
 			"klikar3\\yii2-rgraph\\": ""
 		}
-	},
+	}
 }
