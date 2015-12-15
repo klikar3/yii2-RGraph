@@ -21,7 +21,7 @@ class RGraphBarAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-        'app\assets\RGraphAsset'
+        'klikar3\rgraph\RGraphAsset'
     ];
     
 /*    public function init()
