@@ -17,7 +17,7 @@
     },
 	"autoload": {
 		"psr-4": {
-			"klikar3\\rgraph\\": ""
+			"klikar3\\rgraph\\": ["","/","RGraph/","RGraph/libraries/"]
 		}
 	}
 }
