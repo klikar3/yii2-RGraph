@@ -2,11 +2,12 @@
     "name": "klikar3/yii2-rgraph",
     "type": "yii2-extension",
     "description": "Graphing with RGraph",
-    "keywords": ["rgraph"],
+    "keywords": ["yii2","rgraph"],
     "homepage": "http://github.com/klikar3/yii2-rgraph",
     "license": "GNU General Public License",
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.5"
 	},
     "require-dev": {
         "phpunit/phpunit": "3.7.*", 
