@@ -17,7 +17,7 @@ abstract class RGraphWidget extends Widget
 	 * RGraph path where css,images,libraries and scripts directory are present.
 	 * @var string
 	 */
-	public $rGraphPath = 'application.vendors.klikar3.rgraph.RGraph';
+	public $rGraphPath = '@vendor/klikar3/rgraph/RGraph';
 	protected $rGraphUrl;
 
 	public $allowAdjusting = false;
@@ -130,7 +130,8 @@ abstract class RGraphWidget extends Widget
 */
 	  	$this->registerCssFile(__DIR__ . DIRECTORY_SEPARATOR . '..\..\rgraph\css/website.css');
 		$scriptUrl = Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
-		$this->rGraphUrl = Yii::$app->assetManager->publish($scriptUrl);
+		list($dir,$url) = Yii::$app->assetManager->publish($scriptUrl);
+		$this->rGraphUrl = $url;
 
 
 		$this->registerScriptFile('RGraph.common.core.js');
@@ -156,12 +157,12 @@ abstract class RGraphWidget extends Widget
 	 * @param string $fileName JavaScript file name
 	 * @param integer $position the position of the JavaScript file. Valid values include the following:
 	 * <ul>
-	 * <li>CClientScript::POS_HEAD : the script is inserted in the head section right before the title element.</li>
-	 * <li>CClientScript::POS_BEGIN : the script is inserted at the beginning of the body section.</li>
-	 * <li>CClientScript::POS_END : the script is inserted at the end of the body section.</li>
+	 * <li>\yii\web\View::POS_HEAD : the script is inserted in the head section right before the title element.</li>
+	 * <li>\yii\web\View::POS_BEGIN : the script is inserted at the beginning of the body section.</li>
+	 * <li>\yii\web\View::POS_END : the script is inserted at the end of the body section.</li>
 	 * </ul>
 	 */
-	protected function registerScriptFile($fileName, $position = CClientScript::POS_END)
+	protected function registerScriptFile($fileName, $position = \yii\web\View::POS_END)
 	{
 //		Yii::app()->getClientScript()->registerScriptFile($this->rGraphUrl . '/' . $fileName, $position);
 		$view = $this->getView();
@@ -170,7 +171,7 @@ abstract class RGraphWidget extends Widget
 
 //        rgraphAsset::register($view);
 
-        $view->registerJSFile($fileName);
+        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, [$position]);
 		
 	}
 
@@ -185,6 +186,8 @@ protected function registerCssFile($fileName)
 
 	public function run()
 	{
-		echo CHtml::tag('canvas', $this->htmlOptions, '[No canvas support]') . "\n";
+//		echo CHtml::tag('canvas', $this->htmlOptions, '[No canvas support]') . "\n";
+		echo Html::tag('canvas', '[No canvas support]' . "\n", $this->options);
+
 	}
 }

@@ -49,9 +49,8 @@ class RGraphBar extends RGraphWidget
 //		$script = ";var $id = new RGraph.Bar('{$id}',{$data}).draw();";
 //		$script .= $this->getEncodedOptions($id);
 //		$script .= "{$id}.{$this->drawFunction};";
-      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}});";
+      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
 
-//		$cs = Yii::app()->getClientScript();
 		$view->registerJs($script);  
 		parent::run();
 	}   
