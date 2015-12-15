@@ -32,24 +32,23 @@ class RGraphBar extends RGraphWidget
  //   $view = $this->getView();
     
  //   RGraphBar::register($view);
-		parent::init();
-		$this->registerScriptFile('RGraph.bar.js');
+	  parent::init();
+	  $this->registerScriptFile('RGraph.bar.js');
 	}
 
 	public function run()
 	{
 //    echo Html::tag('canvas', '', $this->options);		
-		$id = $this->getId();
-    $view = $this->getView();
+	  $id = $this->getId();
+      $view = $this->getView();
 
-		$data = !empty($this->data) ? Json::encode($this->data) : '{}';;
-//		$options = Json::encode($this->options);
-    $options = !empty($this->options) ? Json::encode($this->options) : '{}';
+	  $data = !empty($this->data) ? Json::encode($this->data) : '{}';;
+      $options = !empty($this->options) ? Json::encode($this->options) : '{}';
 		
-//		$script = ";var $id = new RGraph.Bar('{$id}',{$data}).draw();";
-//		$script .= $this->getEncodedOptions($id);
-//		$script .= "{$id}.{$this->drawFunction};";
-      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
+		$script = ";var $id = new RGraph.Bar('{$id}',{$data}).draw();";
+		$script .= $this->getEncodedOptions($id);
+		$script .= "{$id}.{$this->drawFunction};";
+//      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
 
 		$view->registerJs($script);  
 		parent::run();
