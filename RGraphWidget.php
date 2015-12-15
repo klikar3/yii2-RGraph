@@ -120,11 +120,17 @@ abstract class RGraphWidget extends Widget
 	 */
 	protected function registerScripts()
 	{
-		$commonCss = Yii::app()->assetManager->publish(Yii::getPathOfAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'css');
+/*		$commonCss = Yii::$app->assetManager->publish(Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'css');
 		Yii::app()->getClientScript()->registerCssFile($commonCss . '/common.css');
 
-		$scriptUrl = Yii::getPathOfAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
+		$scriptUrl = Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
 		$this->rGraphUrl = Yii::app()->assetManager->publish($scriptUrl);
+*/
+	  	$this->registerCssFile(__DIR__ . DIRECTORY_SEPARATOR . '..\..\rgraph\css/website.css');
+		$scriptUrl = Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
+		$this->rGraphUrl = Yii::$app->assetManager->publish($scriptUrl);
+
+
 		$this->registerScriptFile('RGraph.common.core.js');
 		if ($this->allowAdjusting)
 			$this->registerScriptFile('RGraph.common.adjusting.js');
@@ -155,7 +161,24 @@ abstract class RGraphWidget extends Widget
 	 */
 	protected function registerScriptFile($fileName, $position = CClientScript::POS_END)
 	{
-		Yii::app()->getClientScript()->registerScriptFile($this->rGraphUrl . '/' . $fileName, $position);
+//		Yii::app()->getClientScript()->registerScriptFile($this->rGraphUrl . '/' . $fileName, $position);
+		$view = $this->getView();
+        $data = !empty($this->data) ? Json::encode($this->data) : '{}';
+        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : '{}';
+
+//        rgraphAsset::register($view);
+
+        $view->registerJSFile($fileName);
+		
+	}
+
+protected function registerCssFile($fileName)
+	{
+        $view = $this->getView();
+        $data = !empty($this->data) ? Json::encode($this->data) : '{}';
+        $options = !empty($this->options) ? Json::encode($this->options) : '{}';
+
+        $view->registerCssFile($fileName);
 	}
 
 	public function run()
