@@ -8,6 +8,8 @@ namespace klikar3\rgraph;
 use Yii;
 use yii\base\InvalidCallException;
 use yii\base\Widget;
+use yii\helpers\Html;
+use yii\helpers\Json;
  
 abstract class RGraphWidget extends Widget
 {

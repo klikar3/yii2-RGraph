@@ -29,7 +29,7 @@ class RGraphBar extends RGraphWidget
     if (!isset($this->options['id'])) {
         $this->options['id'] = $id;
     }
-    $view = $this->getView();
+ //   $view = $this->getView();
     
  //   RGraphBar::register($view);
 		parent::init();
