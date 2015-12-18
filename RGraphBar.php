@@ -38,7 +38,6 @@ class RGraphBar extends RGraphWidget
 	{
 //    echo Html::tag('canvas', '', $this->options);		
 		$id = $this->getId();
-	    $view = $this->getView();
 	
 		$data = !empty($this->data) ? Json::encode($this->data) : '{}';;
 	    $options = !empty($this->options) ? Json::encode($this->options) : '{}';
@@ -48,6 +47,7 @@ class RGraphBar extends RGraphWidget
 		$script .= "{$id}.{$this->drawFunction};";
 //      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
 
+	    $view = $this->getView();
 		$view->registerJs($script);  
 		parent::run();
 	}   

@@ -4,7 +4,15 @@
  * @author Ricardo Obregón <ricardo@obregon.co>
  * @date 19/04/12 05:30 PM
  */
-require_once('RGraphWidget.php');
+namespace klikar3\rgraph;
+
+use yii\base\InvalidConfigException;
+use yii\base\Widget;
+use yii\helpers\Html;
+use yii\helpers\Json;
+
+use klikar3\rgraph\RGraphWidget;
+//require_once('RGraphWidget.php');
 class RGraphHProgress extends RGraphWidget
 {
 	public $maxValue = 100;
@@ -19,12 +27,12 @@ class RGraphHProgress extends RGraphWidget
 	{
 		parent::run();
 		$id = 'HProgress' . $this->getId();
-		$data = CJSON::encode($this->data);
+		$data = Json::encode($this->data);
 		$script = "var $id = new RGraph.HProgress('{$this->getId()}',{$data},{$this->maxValue});";
 		$script .= $this->getEncodedOptions($id);
 		$script .= "{$id}.{$this->drawFunction};";
 
-		$cs = Yii::app()->getClientScript();
-		$cs->registerScript($id, $script);
+	    $view = $this->getView();
+		$view->registerJs($script);  
 	}
 }
