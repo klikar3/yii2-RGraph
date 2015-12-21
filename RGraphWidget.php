@@ -23,7 +23,7 @@ abstract class RGraphWidget extends Widget
 	public $allowAdjusting = false;
 	public $allowAnnotate = false;
 	public $allowContext = false;
-	public $allowDynamic = false
+	public $allowDynamic = false;
 	public $allowEffects = false;
 	public $allowResizing = false;
 	public $allowTooltips = false;
