@@ -13,11 +13,20 @@ use yii\helpers\Json;
 
 use klikar3\rgraph\RGraphWidget;
 
-//require_once('RGraphWidget.php');
+
 class RGraphLine extends RGraphWidget
 {
 	public function init()
 	{
+		$id = $this->getId();
+		if (isset($this->htmlOptions['id']))
+			$id = $this->htmlOptions['id'];
+		else
+			$this->htmlOptions['id'] = $id;
+	    if (!isset($this->options['id'])) {
+	        $this->options['id'] = $id;
+	    }
+    
 		parent::init();
 		$this->registerScriptFile('RGraph.line.js');
 	}
