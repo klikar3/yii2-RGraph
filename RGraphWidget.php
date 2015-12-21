@@ -23,6 +23,7 @@ abstract class RGraphWidget extends Widget
 	public $allowAdjusting = false;
 	public $allowAnnotate = false;
 	public $allowContext = false;
+	public $allowDynamic = false
 	public $allowEffects = false;
 	public $allowResizing = false;
 	public $allowTooltips = false;
@@ -141,6 +142,8 @@ abstract class RGraphWidget extends Widget
 			$this->registerScriptFile('RGraph.common.annotate.js');
 		if ($this->allowContext)
 			$this->registerScriptFile('RGraph.common.context.js');
+		if ($this->allowDynamic)
+			$this->registerScriptFile('RGraph.common.dynamic.js');
 		if ($this->allowEffects)
 			$this->registerScriptFile('RGraph.common.effects.js');
 		if ($this->allowResizing)
