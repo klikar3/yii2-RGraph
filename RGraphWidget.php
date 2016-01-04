@@ -89,13 +89,13 @@ abstract class RGraphWidget extends Widget
 				}
 			}
 			if (!empty($tmpResult)) {
-				$result[$parent] = Json::encode($tmpResult);
+				$result[$parent] = Json::encode($tmpResult, JSON_FORCE_OBJECT);
 			}
 		} else {
 			if ($parent === null) {
-				$result[] = Json::encode($options);
+				$result[] = Json::encode($options, JSON_FORCE_OBJECT);
 			} else {
-				$result[$parent] = Json::encode($options);
+				$result[$parent] = Json::encode($options, JSON_FORCE_OBJECT);
 			}
 		}
 		return $result;
@@ -169,8 +169,8 @@ abstract class RGraphWidget extends Widget
 	{
 //		Yii::app()->getClientScript()->registerScriptFile($this->rGraphUrl . '/' . $fileName, $position);
 		$view = $this->getView();
-        $data = !empty($this->data) ? Json::encode($this->data) : '{}';
-        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : '{}';
+        $data = !empty($this->data) ? Json::encode($this->data, JSON_FORCE_OBJECT) : '{}';
+        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
 
 //        rgraphAsset::register($view);
 
@@ -181,8 +181,8 @@ abstract class RGraphWidget extends Widget
 protected function registerCssFile($fileName)
 	{
         $view = $this->getView();
-        $data = !empty($this->data) ? Json::encode($this->data) : '{}';
-        $options = !empty($this->options) ? Json::encode($this->options) : '{}';
+        $data = !empty($this->data) ? Json::encode($this->data, JSON_FORCE_OBJECT) : '{}';
+        $options = !empty($this->options) ? Json::encode($this->options, JSON_FORCE_OBJECT) : '{}';
 
         $view->registerCssFile($fileName);
 	}
