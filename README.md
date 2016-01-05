@@ -1,12 +1,12 @@
 # yii2-RGraph
-yii2 extension for the RGraph graphing library, based on robregonm's work
+yii2 extension for the RGraph graphing library, based on robregonm's work<br>
 RGraph is available under GPL
 
 
 Example: 
 
 ---- controller:
-<pre>. . .
+```php
     public function actionDetail($cntr,$id,$days)
     {
 
@@ -50,78 +50,79 @@ Example:
         return $dataset;
 
     }
-...
-</pre>
+```php
+
 ---- View:
-<pre>
-<?php
 
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\web\JsExpression;
-use yii\widgets\ListView;
-
-use klikar3\rgraph\RGraph;
-use klikar3\rgraph\RGraphLine;
-
-
-/* @var $this yii\web\View */
-
-$this->title = 'BaseLine';
-
-
-?>
-<div class="site-index">
-
-
-    <div class="body-content">
-
-<h3><?php echo 'Server: '.$servername ?></h3> <?=Html::a('Ressources',Url::toRoute(['res_cpu', 'id' => $id]));?>
-  
-
-<?= 'Refreshed on '.date('d.m.Y H:i:s'); ?>
-<div class="row">
-  <?= RGraphLine::widget([
-          'data' => !empty($dataset) ? array_map('intval',ArrayHelper::getColumn($dataset,'value')) : [ 0 ],
-          'allowDynamic' => true,
-          'allowTooltips' => true,
-          'allowContext' => true,
-          'options' => [
-              'height' => '600px',
-              'width' => '800px',
-              'colors' => ['blue'],
-              'filled' => true,
-//              'spline' => true,
-              'clearto' => ['white'],
-              'labels' => !empty($dataset) ? array_map(function($val){return substr($val,1,15);},
-                                    array_column(array_chunk(ArrayHelper::getColumn($dataset,'CaptureDate'),count($dataset)/10),0)
-                          ) : [ 'No Data' ],
-              'tooltips' => !empty($dataset) ? ArrayHelper::getColumn($dataset,'value') : [ 'No Data' ],
-              'numxticks' => 10,
-              'textAngle' => 45,
-              'textSize' => 8,
-              'gutter' => ['left' => 45, 'bottom' => 50, 'top' => 50],
-              'title' => $cntr,
-              'titleSize' => 12,
-              'titleBold' => false,
-              'tickmarks' => 'none',
-              'ymax' => 100,
-              'backgroundColor' => 'Gradient(red:orange:white)',
-              'backgroundGridAutofitNumvlines' => 10,
-              'key' => ['keyInteractive' => true],
-              'contextmenu' => [
-                  ['24h', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 1 ])."\");}") ],
-                  ['7 days',new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 7 ])."\");}") ],
-                  ['32 days',new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 32 ])."\");}") ],
-                  ['1 year', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 366 ])."\");}") ],
-                  ['All', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 9999 ])."\");}") ],
-              ],
-          ]
-  ]);
-  ?>
-
-</div>
-   </div>
-</div>
-</pre>
+```html
+    
+    
+    use yii\helpers\ArrayHelper;
+    use yii\helpers\Html;
+    use yii\helpers\Url;
+    use yii\web\JsExpression;
+    use yii\widgets\ListView;
+    
+    use klikar3\rgraph\RGraph;
+    use klikar3\rgraph\RGraphLine;
+    
+    
+    $this->title = 'BaseLine';
+    
+    
+    ```html
+    
+    <div class="site-index">
+    
+    
+        <div class="body-content">
+    
+    <h3><?php echo 'Server: '.$servername ?></h3> <?= Html::a('Ressources',Url::toRoute(['res_cpu', 'id' => $id])); ?>
+      
+    
+    <?= 'Refreshed on '.date('d.m.Y H:i:s'); ?>
+    <div class="row">
+      <?= RGraphLine::widget([
+              'data' => !empty($dataset) ? array_map('intval',ArrayHelper::getColumn($dataset,'value')) : [ 0 ],
+              'allowDynamic' => true,
+              'allowTooltips' => true,
+              'allowContext' => true,
+              'options' => [
+                  'height' => '600px',
+                  'width' => '800px',
+                  'colors' => ['blue'],
+                  'filled' => true,
+    //              'spline' => true,
+                  'clearto' => ['white'],
+                  'labels' => !empty($dataset) ? array_map(function($val){return substr($val,1,15);},
+                                        array_column(array_chunk(ArrayHelper::getColumn($dataset,'CaptureDate'),count($dataset)/10),0)
+                              ) : [ 'No Data' ],
+                  'tooltips' => !empty($dataset) ? ArrayHelper::getColumn($dataset,'value') : [ 'No Data' ],
+                  'numxticks' => 10,
+                  'textAngle' => 45,
+                  'textSize' => 8,
+                  'gutter' => ['left' => 45, 'bottom' => 50, 'top' => 50],
+                  'title' => $cntr,
+                  'titleSize' => 12,
+                  'titleBold' => false,
+                  'tickmarks' => 'none',
+                  'ymax' => 100,
+                  'backgroundColor' => 'Gradient(red:orange:white)',
+                  'backgroundGridAutofitNumvlines' => 10,
+                  'key' => ['keyInteractive' => true],
+                  'contextmenu' => [
+                      ['24h', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 1 ])."\");}") ],
+                      ['7 days',new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 7 ])."\");}") ],
+                      ['32 days',new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 32 ])."\");}") ],
+                      ['1 year', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 366 ])."\");}") ],
+                      ['All', new JsExpression("function go() {window.location.assign(\"".Url::toRoute(['detail','cntr' => $cntrs[0], 'id' => $id, 'days' => 9999 ])."\");}") ],
+                  ],
+              ]
+      ]);
+      ? >
+    
+    </div>
+       </div>
+    </div>
+```
+    
