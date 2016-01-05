@@ -53,6 +53,7 @@ Example:
 ...
 </pre>
 ---- View:
+<pre>
 <?php
 
 use yii\helpers\ArrayHelper;
@@ -123,3 +124,4 @@ $this->title = 'BaseLine';
 </div>
    </div>
 </div>
+</pre>
