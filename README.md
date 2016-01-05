@@ -6,7 +6,7 @@ RGraph is available under GPL
 Example: 
 
 ---- controller:
-...
+<pre>. . .
     public function actionDetail($cntr,$id,$days)
     {
 
@@ -14,16 +14,12 @@ Example:
 
         date_default_timezone_set('Europe/Berlin'); 
         $dt = date('Y-m-d H:i:s',time() - 60 * 60 * 24 * $days);
-//        $dataset = $this->getPerfmonDataset($servername,$cntr,$dt);
-//        \yii\helpers\VarDumper::dump($dataset_cpu, 10, true);
 
         return $this->render('detail', [
             'id' => $id,
             'cntr' => $cntr,
             'servername' => $servername,
             'dataset' => $this->getPerfmonDataset($servername,$cntr,$dt),
-//            'dataset_pps' => $dataset_pps,
-//            'dataset_dql' => $dataset_dql,
         ]);
     }
     
@@ -55,7 +51,7 @@ Example:
 
     }
 ...
-
+</pre>
 ---- View:
 <?php
 
