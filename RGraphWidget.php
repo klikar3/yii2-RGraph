@@ -167,24 +167,21 @@ abstract class RGraphWidget extends Widget
 	 */
 	protected function registerScriptFile($fileName, $position = \yii\web\View::POS_END)
 	{
-//		Yii::app()->getClientScript()->registerScriptFile($this->rGraphUrl . '/' . $fileName, $position);
 		$view = $this->getView();
-        $data = !empty($this->data) ? Json::encode($this->data, JSON_FORCE_OBJECT) : '{}';
-        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
-
-//        rgraphAsset::register($view);
-
-        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, [$position]);
-		
+	         
+	        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
+	
+	        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, [$position]);
+			
 	}
 
 protected function registerCssFile($fileName)
 	{
-        $view = $this->getView();
-        $data = !empty($this->data) ? Json::encode($this->data, JSON_FORCE_OBJECT) : '{}';
-        $options = !empty($this->options) ? Json::encode($this->options, JSON_FORCE_OBJECT) : '{}';
-
-        $view->registerCssFile($fileName);
+	        $view = $this->getView();
+	
+	        $options = !empty($this->options) ? Json::encode($this->options, JSON_FORCE_OBJECT) : '{}';
+	
+	        $view->registerCssFile($fileName);
 	}
 
 	public function run()
