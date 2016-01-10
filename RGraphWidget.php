@@ -62,6 +62,12 @@ abstract class RGraphWidget extends Widget
 			$id = $this->htmlOptions['id'];
 		else
 			$this->htmlOptions['id'] = $id;
+			    
+		if (!isset($this->options['id'])) {
+			$this->options['id'] = $id;
+		}
+
+		
 
 		$this->registerScripts();
 		parent::init();
