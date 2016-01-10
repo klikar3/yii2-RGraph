@@ -175,7 +175,7 @@ abstract class RGraphWidget extends Widget
 			
 	}
 
-protected function registerCssFile($fileName)
+	protected function registerCssFile($fileName)
 	{
 	        $view = $this->getView();
 	
