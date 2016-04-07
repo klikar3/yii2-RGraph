@@ -4,10 +4,10 @@
     "description": "Graphing with RGraph",
     "keywords": ["yii2","rgraph"],
     "homepage": "http://github.com/klikar3/yii2-rgraph",
-    "license": "GNU General Public License",
+    "license": "GPL-3.0",
 	"require": {
 		"php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.5"
+        "yiisoft/yii2": "~2.0.5"
 	},
     "require-dev": {
         "phpunit/phpunit": "3.7.*", 
