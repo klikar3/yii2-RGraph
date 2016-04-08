@@ -95,13 +95,13 @@ abstract class RGraphWidget extends Widget
 				}
 			}
 			if (!empty($tmpResult)) {
-				$result[$parent] = Json::encode($tmpResult, JSON_FORCE_OBJECT);
+				$result[$parent] = Json::encode($tmpResult);
 			}
 		} else {
 			if ($parent === null) {
 				$result[] = Json::encode($options, JSON_FORCE_OBJECT);
 			} else {
-				$result[$parent] = Json::encode($options, JSON_FORCE_OBJECT);
+				$result[$parent] = Json::encode($options);
 			}
 		}
 		return $result;
@@ -193,7 +193,7 @@ abstract class RGraphWidget extends Widget
 	public function run()
 	{
 //		echo CHtml::tag('canvas', $this->htmlOptions, '[No canvas support]') . "\n";
-		echo Html::tag('canvas', '[No canvas support]' . "\n", $this->options);
+		echo Html::tag('canvas', '[No canvas support]', $this->htmlOptions) . "\n";
 
 	}
 }
