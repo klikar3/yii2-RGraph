@@ -28,6 +28,7 @@ abstract class RGraphWidget extends Widget
 	public $allowResizing = false;
 	public $allowTooltips = false;
 	public $allowZoom = false;
+  public $allowKeys = false;
 
 	public $drawFunction = 'Draw()';
 
@@ -142,6 +143,10 @@ abstract class RGraphWidget extends Widget
 
 
 		$this->registerScriptFile('RGraph.common.core.js');
+		if ($this->allowKeys) {
+    	$this->registerScriptFile('RGraph.common.key.js');
+      $this->registerScriptFile('RGraph.drawing.rect.js');
+    }  
 		if ($this->allowAdjusting)
 			$this->registerScriptFile('RGraph.common.adjusting.js');
 		if ($this->allowAnnotate)
