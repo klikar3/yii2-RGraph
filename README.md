@@ -3,6 +3,7 @@
 <img src="/klikar3/yii2-RGraph/blob/master/example.jpg" alt="example">
 yii2 extension for the RGraph graphing library, based on robregonm's work<br>
 RGraph is available under GPL
+----
 
 <a href="http://www.rgraph.net/open-source">http://www.rgraph.net/open-source</a>
 
