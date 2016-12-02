@@ -1,6 +1,6 @@
 # yii2-RGraph
 
-![myimage-alt-tag](/klikar3/yii2-RGraph/blob/master/example.jpg)
+![example.jpg](https://raw.githubusercontent.com/klikar3/yii2-RGraph/master/example.jpg)
 ----
 yii2 extension for the RGraph graphing library, based on robregonm's work<br>
 RGraph is available under GPL
