@@ -1,6 +1,6 @@
 # yii2-RGraph
 
-<img source="example.jpg">
+<img src="example.jpg" alt="example">
 yii2 extension for the RGraph graphing library, based on robregonm's work<br>
 RGraph is available under GPL
 
