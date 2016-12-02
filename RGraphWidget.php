@@ -20,9 +20,9 @@ abstract class RGraphWidget extends Widget
 	public $rGraphPath = '@vendor/klikar3/rgraph/RGraph';
 	protected $rGraphUrl;
 
-	public $allowAdjusting = false;
 	public $allowAnnotate = false;
 	public $allowContext = false;
+	public $allowCsv = false;
 	public $allowDynamic = false;
 	public $allowEffects = false;
 	public $allowResizing = false;
@@ -66,9 +66,7 @@ abstract class RGraphWidget extends Widget
 			    
 		if (!isset($this->options['id'])) {
 			$this->options['id'] = $id;
-		}
-
-		
+		}		
 
 		$this->registerScripts();
 		parent::init();
@@ -141,14 +139,13 @@ abstract class RGraphWidget extends Widget
 		list($dir,$url) = Yii::$app->assetManager->publish($scriptUrl);
 		$this->rGraphUrl = $url;
 
-
 		$this->registerScriptFile('RGraph.common.core.js');
+    
 		if ($this->allowKeys) {
+			$this->registerScriptFile('RGraph.common.dynamic.js');
     	$this->registerScriptFile('RGraph.common.key.js');
       $this->registerScriptFile('RGraph.drawing.rect.js');
     }  
-		if ($this->allowAdjusting)
-			$this->registerScriptFile('RGraph.common.adjusting.js');
 		if ($this->allowAnnotate)
 			$this->registerScriptFile('RGraph.common.annotate.js');
 		if ($this->allowContext)
@@ -176,13 +173,13 @@ abstract class RGraphWidget extends Widget
 	 * <li>\yii\web\View::POS_END : the script is inserted at the end of the body section.</li>
 	 * </ul>
 	 */
-	protected function registerScriptFile($fileName, $position = \yii\web\View::POS_END)
+	protected function registerScriptFile($fileName, $position = \yii\web\View::POS_HEAD)
 	{
 		$view = $this->getView();
 	         
 	        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
 	
-	        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, [$position]);
+	        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, ['position'=>$position]);
 			
 	}
 

@@ -26,8 +26,9 @@ class RGraphBar extends RGraphWidget
 			$id = $this->htmlOptions['id'];
 		else
 			$this->htmlOptions['id'] = $id;
-	    if (!isset($this->options['id'])) {
-	        $this->options['id'] = $id;
+      
+	  if (!isset($this->options['id'])) {
+	      $this->options['id'] = $id;
 	    }
     
 	 	parent::init();
@@ -36,18 +37,19 @@ class RGraphBar extends RGraphWidget
 
 	public function run()
 	{
-		$id = $this->getId();
+		$id = "rgBar_" . $this->getId();
 	
 		$data = !empty($this->data) ? Json::encode($this->data) : '{}';;
 	    $options = !empty($this->options) ? Json::encode($this->options) : '{}';
 		
-		$jid = "rg_bar_{$id}";
-		$script = ";var $jid = new RGraph.Bar('{$id}',{$data});";
+		$jid = "{$id}";
+//		$script = ";var $jid = new RGraph.Bar('{$id}',{$data});";
+		$script = "var $jid = new RGraph.Bar('{$this->getId()}',{$data});";
 		$script .= $this->getEncodedOptions($jid);
 		$script .= "{$jid}.{$this->drawFunction};";
 //      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
 
-	    $view = $this->getView();
+	  $view = $this->getView();
 		$view->registerJs($script);  
 		parent::run();
 	}   
