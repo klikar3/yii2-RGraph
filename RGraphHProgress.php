@@ -3,6 +3,8 @@
  * RGraph Horizontal Progress Bar class
  * @author Ricardo Obregón <ricardo@obregon.co>
  * @date 19/04/12 05:30 PM
+ * amended by Karl Klingler <klikar3@github.com>
+ * @date 02/12/16 
  */
 namespace klikar3\rgraph;
 
@@ -24,9 +26,10 @@ class RGraphHProgress extends RGraphWidget
 			$id = $this->htmlOptions['id'];
 		else
 			$this->htmlOptions['id'] = $id;
-	    if (!isset($this->options['id'])) {
-	        $this->options['id'] = $id;
-	    }
+      
+    if (!isset($this->options['id'])) {
+        $this->options['id'] = $id;
+    }
     
 		parent::init();
 		$this->registerScriptFile('RGraph.hprogress.js');
@@ -41,7 +44,7 @@ class RGraphHProgress extends RGraphWidget
 		$script .= $this->getEncodedOptions($id);
 		$script .= "{$id}.{$this->drawFunction};";
 
-	    $view = $this->getView();
+	  $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }

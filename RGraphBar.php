@@ -3,6 +3,8 @@
  * RGraph Bars class
  * @author Ricardo Obregón <ricardo@obregon.co>
  * @date 19/04/12 05:30 PM
+ * amended by Karl Klingler <klikar3@github.com>
+ * @date 02/12/16 
  */
 
 namespace klikar3\rgraph;
@@ -14,8 +16,6 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 
 use klikar3\rgraph\RGraphWidget;
-
-//require_once('RGraphWidget.php');
 
 class RGraphBar extends RGraphWidget
 {
@@ -39,8 +39,8 @@ class RGraphBar extends RGraphWidget
 	{
 		$id = "rgBar_" . $this->getId();
 	
-		$data = !empty($this->data) ? Json::encode($this->data) : '{}';;
-	    $options = !empty($this->options) ? Json::encode($this->options) : '{}';
+		$data = !empty($this->data) ? Json::encode($this->data) : '{}';
+	  $options = !empty($this->options) ? Json::encode($this->options) : '{}';
 		
 		$jid = "{$id}";
 //		$script = ";var $jid = new RGraph.Bar('{$id}',{$data});";

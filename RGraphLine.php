@@ -3,6 +3,8 @@
  * RGraph Line class
  * @author Ricardo Obregón <ricardo@obregon.co>
  * @date 19/04/12 05:30 PM
+ * amended by Karl Klingler <klikar3@github.com>
+ * @date 02/12/16 
  */
 namespace klikar3\rgraph;
 

@@ -1,6 +1,8 @@
 <?php
 /**
  * @author Ricardo Obregón <ricardo@obregon.co>
+ * amended by Karl Klingler <klikar3@github.com>
+ * @date 02/12/16 
  */
 
 namespace klikar3\rgraph;
@@ -134,7 +136,7 @@ abstract class RGraphWidget extends Widget
 		$scriptUrl = Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
 		$this->rGraphUrl = Yii::app()->assetManager->publish($scriptUrl);
 */
-	  	$this->registerCssFile(__DIR__ . DIRECTORY_SEPARATOR . '..\..\rgraph\css/website.css');
+	  $this->registerCssFile(__DIR__ . DIRECTORY_SEPARATOR . '..\..\rgraph\css/website.css');
 		$scriptUrl = Yii::getAlias($this->rGraphPath) . DIRECTORY_SEPARATOR . 'libraries' . DIRECTORY_SEPARATOR;
 		list($dir,$url) = Yii::$app->assetManager->publish($scriptUrl);
 		$this->rGraphUrl = $url;
@@ -177,25 +179,23 @@ abstract class RGraphWidget extends Widget
 	{
 		$view = $this->getView();
 	         
-	        $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
-	
-	        $view->registerJSFile($this->rGraphUrl . '/' . $fileName, ['position'=>$position]);
+    $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions, JSON_FORCE_OBJECT) : '{}';
+
+    $view->registerJSFile($this->rGraphUrl . '/' . $fileName, ['position'=>$position]);
 			
 	}
 
 	protected function registerCssFile($fileName)
 	{
-	        $view = $this->getView();
-	
-	        $options = !empty($this->options) ? Json::encode($this->options, JSON_FORCE_OBJECT) : '{}';
-	
-	        $view->registerCssFile($fileName);
+    $view = $this->getView();
+
+    $options = !empty($this->options) ? Json::encode($this->options, JSON_FORCE_OBJECT) : '{}';
+
+    $view->registerCssFile($fileName);
 	}
 
 	public function run()
 	{
-//		echo CHtml::tag('canvas', $this->htmlOptions, '[No canvas support]') . "\n";
 		echo Html::tag('canvas', '[No canvas support]', $this->htmlOptions) . "\n";
-
 	}
 }
