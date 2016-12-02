@@ -2,7 +2,7 @@
 ----
 ![example.jpg](https://raw.githubusercontent.com/klikar3/yii2-RGraph/master/example.jpg)
 oder
-![example.jpg](https://raw.githubusercontent.com/klikar3/yii2-RGraph/master/example2.jpg)
+![example2.jpg](https://raw.githubusercontent.com/klikar3/yii2-RGraph/master/example2.jpg)
 ----
 yii2 extension for the RGraph graphing library, based on robregonm's work<br>
 RGraph is available under GPL
