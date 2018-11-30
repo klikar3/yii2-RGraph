@@ -4,7 +4,7 @@
     "description": "Graphing with RGraph",
     "keywords": ["yii2","rgraph"],
     "homepage": "http://github.com/klikar3/yii2-rgraph",
-    "license": "GPL-3.0",
+    "license": "LGPL-3.0-or-later",
 	"require": {
 		"php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.5"
