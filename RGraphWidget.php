@@ -19,7 +19,7 @@ abstract class RGraphWidget extends Widget
 	 * RGraph path where css,images,libraries and scripts directory are present.
 	 * @var string
 	 */
-	public $rGraphPath = '@vendor/klikar3/rgraph/RGraph';
+	public $rGraphPath = '@vendor/klikar3/rgraph/Rgraph';
 	protected $rGraphUrl;
 
 	public $allowAnnotate = false;
