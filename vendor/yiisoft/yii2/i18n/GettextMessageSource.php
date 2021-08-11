@@ -40,11 +40,11 @@ class GettextMessageSource extends MessageSource
      */
     public $catalog = 'messages';
     /**
-     * @var boolean
+     * @var bool
      */
     public $useMoFile = true;
     /**
-     * @var boolean
+     * @var bool
      */
     public $useBigEndian = false;
 
@@ -72,14 +72,12 @@ class GettextMessageSource extends MessageSource
         $fallbackLanguage = substr($language, 0, 2);
         $fallbackSourceLanguage = substr($this->sourceLanguage, 0, 2);
 
-        if ($fallbackLanguage !== $language) {
-            $this->loadFallbackMessages($category, $fallbackLanguage, $messages, $messageFile);
-        } elseif ($language === $fallbackSourceLanguage) {
+        if ($fallbackLanguage !== '' && $fallbackLanguage !== $language) {
+            $messages = $this->loadFallbackMessages($category, $fallbackLanguage, $messages, $messageFile);
+        } elseif ($fallbackSourceLanguage !== '' && $language === $fallbackSourceLanguage) {
             $messages = $this->loadFallbackMessages($category, $this->sourceLanguage, $messages, $messageFile);
-        } else {
-            if ($messages === null) {
-                Yii::error("The message file for category '$category' does not exist: $messageFile", __METHOD__);
-            }
+        } elseif ($messages === null) {
+            Yii::error("The message file for category '$category' does not exist: $messageFile", __METHOD__);
         }
 
         return (array) $messages;
@@ -103,7 +101,11 @@ class GettextMessageSource extends MessageSource
         $fallbackMessageFile = $this->getMessageFilePath($fallbackLanguage);
         $fallbackMessages = $this->loadMessagesFromFile($fallbackMessageFile, $category);
 
-        if ($messages === null && $fallbackMessages === null && $fallbackLanguage !== $this->sourceLanguage) {
+        if (
+            $messages === null && $fallbackMessages === null
+            && $fallbackLanguage !== $this->sourceLanguage
+            && strpos($this->sourceLanguage, $fallbackLanguage) !== 0
+        ) {
             Yii::error("The message file for category '$category' does not exist: $originalMessageFile "
                 . "Fallback file does not exist as well: $fallbackMessageFile", __METHOD__);
         } elseif (empty($messages)) {
@@ -111,7 +113,7 @@ class GettextMessageSource extends MessageSource
         } elseif (!empty($fallbackMessages)) {
             foreach ($fallbackMessages as $key => $value) {
                 if (!empty($value) && empty($messages[$key])) {
-                    $messages[$key] = $fallbackMessages[$key];
+                    $messages[$key] = $value;
                 }
             }
         }
@@ -158,8 +160,8 @@ class GettextMessageSource extends MessageSource
             }
 
             return $messages;
-        } else {
-            return null;
         }
+
+        return null;
     }
 }

@@ -7,13 +7,14 @@
     "license": "LGPL-3.0-or-later",
 	"require": {
 		"php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.5"
+        "yiisoft/yii2": ">=2.0.38"
 	},
     "require-dev": {
-        "phpunit/phpunit": "3.7.*", 
-        "phpunit/php-code-coverage": ">=1.2.10,<1.3.0",
+        "phpunit/phpunit": "*", 
+        "phpunit/php-code-coverage": "*",
         "phploc/phploc": "*",
-        "sebastian/phpcpd": "*"
+        "sebastian/phpcpd": "*",
+        "yidas/yii2-bower-asset": "*"
     },
 	"autoload": {
 		"psr-4": {
