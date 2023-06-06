@@ -6,16 +6,14 @@
     "homepage": "http://github.com/klikar3/yii2-rgraph",
     "license": "LGPL-3.0-or-later",
 	"require": {
-		"php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.38"
+		"php": ">=7.4.0",
+        "yiisoft/yii2": ">=2.0.38",
+        "yidas/yii2-composer-bower-skip": "*"
 	},
   "require-dev": {
         "phpunit/phpunit": "*", 
-        "phpunit/php-code-coverage": "*",
-        "phploc/phploc": "*",
-        "sebastian/phpcpd": "*",
-        "yidas/yii2-bower-asset": "2.0.13.1"
-    },
+        "phpunit/php-code-coverage": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"klikar3\\rgraph\\": ""

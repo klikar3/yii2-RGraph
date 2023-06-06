@@ -496,70 +496,6 @@
             "install-path": "../phar-io/version"
         },
         {
-            "name": "phploc/phploc",
-            "version": "7.0.2",
-            "version_normalized": "7.0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phploc.git",
-                "reference": "af0d5fc84f3f7725513ba59cdcbe670ac2a4532a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phploc/zipball/af0d5fc84f3f7725513ba59cdcbe670ac2a4532a",
-                "reference": "af0d5fc84f3f7725513ba59cdcbe670ac2a4532a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-json": "*",
-                "php": ">=7.3",
-                "phpunit/php-file-iterator": "^3.0",
-                "sebastian/cli-parser": "^1.0",
-                "sebastian/version": "^3.0"
-            },
-            "time": "2020-12-07T05:51:20+00:00",
-            "bin": [
-                "phploc"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "7.0-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
-                }
-            ],
-            "description": "A tool for quickly measuring the size of a PHP project.",
-            "homepage": "https://github.com/sebastianbergmann/phploc",
-            "support": {
-                "issues": "https://github.com/sebastianbergmann/phploc/issues",
-                "source": "https://github.com/sebastianbergmann/phploc/tree/7.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sebastianbergmann",
-                    "type": "github"
-                }
-            ],
-            "install-path": "../phploc/phploc"
-        },
-        {
             "name": "phpunit/php-code-coverage",
             "version": "9.2.26",
             "version_normalized": "9.2.26.0",
@@ -1772,70 +1708,6 @@
             "install-path": "../sebastian/object-reflector"
         },
         {
-            "name": "sebastian/phpcpd",
-            "version": "6.0.3",
-            "version_normalized": "6.0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpcpd.git",
-                "reference": "f3683aa0db2e8e09287c2bb33a595b2873ea9176"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpcpd/zipball/f3683aa0db2e8e09287c2bb33a595b2873ea9176",
-                "reference": "f3683aa0db2e8e09287c2bb33a595b2873ea9176",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "php": ">=7.3",
-                "phpunit/php-file-iterator": "^3.0",
-                "phpunit/php-timer": "^5.0",
-                "sebastian/cli-parser": "^1.0",
-                "sebastian/version": "^3.0"
-            },
-            "time": "2020-12-07T05:39:23+00:00",
-            "bin": [
-                "phpcpd"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.0-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
-                }
-            ],
-            "description": "Copy/Paste Detector (CPD) for PHP code.",
-            "homepage": "https://github.com/sebastianbergmann/phpcpd",
-            "support": {
-                "issues": "https://github.com/sebastianbergmann/phpcpd/issues",
-                "source": "https://github.com/sebastianbergmann/phpcpd/tree/6.0.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sebastianbergmann",
-                    "type": "github"
-                }
-            ],
-            "install-path": "../sebastian/phpcpd"
-        },
-        {
             "name": "sebastian/recursion-context",
             "version": "4.0.5",
             "version_normalized": "4.0.5.0",
@@ -2128,18 +2000,18 @@
             "install-path": "../theseer/tokenizer"
         },
         {
-            "name": "yidas/yii2-bower-asset",
-            "version": "2.0.13.1",
-            "version_normalized": "2.0.13.1",
+            "name": "yidas/yii2-composer-bower-skip",
+            "version": "2.0.13",
+            "version_normalized": "2.0.13.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yidas/yii2-bower-asset.git",
-                "reference": "056dd55087e0b945c01c91c99eb346ef6e28a42e"
+                "url": "https://github.com/yidas/yii2-composer-bower-skip.git",
+                "reference": "1156ed4dc2ddca811bd2582d09e8885585fbd0cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yidas/yii2-bower-asset/zipball/056dd55087e0b945c01c91c99eb346ef6e28a42e",
-                "reference": "056dd55087e0b945c01c91c99eb346ef6e28a42e",
+                "url": "https://api.github.com/repos/yidas/yii2-composer-bower-skip/zipball/1156ed4dc2ddca811bd2582d09e8885585fbd0cb",
+                "reference": "1156ed4dc2ddca811bd2582d09e8885585fbd0cb",
                 "shasum": ""
             },
             "provide": {
@@ -2150,19 +2022,14 @@
                 "bower-asset/typeahead.js": "*",
                 "bower-asset/yii2-pjax": "*"
             },
-            "time": "2019-09-19T11:33:03+00:00",
+            "time": "2017-11-03T06:28:14+00:00",
             "type": "yii2-extension",
             "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "yidas\\yii2BowerAsset\\": ""
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Bower Assets for Yii 2 app provided via Composer repository",
+            "description": "A Composer package that allows you to install or update Yii2 without Bower-Asset",
             "keywords": [
                 "bower",
                 "bower asset",
@@ -2170,10 +2037,10 @@
                 "yii2"
             ],
             "support": {
-                "issues": "https://github.com/yidas/yii2-bower-asset/issues?state=open",
-                "source": "https://github.com/yidas/yii2-bower-asset"
+                "issues": "https://github.com/yidas/yii2-composer-bower-skip/issues?state=open",
+                "source": "https://github.com/yidas/yii2-composer-bower-skip"
             },
-            "install-path": "../yidas/yii2-bower-asset"
+            "install-path": "../yidas/yii2-composer-bower-skip"
         },
         {
             "name": "yiisoft/yii2",
@@ -2387,7 +2254,6 @@
         "nikic/php-parser",
         "phar-io/manifest",
         "phar-io/version",
-        "phploc/phploc",
         "phpunit/php-code-coverage",
         "phpunit/php-file-iterator",
         "phpunit/php-invoker",
@@ -2406,7 +2272,6 @@
         "sebastian/lines-of-code",
         "sebastian/object-enumerator",
         "sebastian/object-reflector",
-        "sebastian/phpcpd",
         "sebastian/recursion-context",
         "sebastian/resource-operations",
         "sebastian/type",

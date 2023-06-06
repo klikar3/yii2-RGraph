@@ -17,7 +17,6 @@ class ComposerStaticInit20170b83fab9ba3f9011310852163472
         array (
             'yii\\composer\\' => 13,
             'yii\\' => 4,
-            'yidas\\yii2BowerAsset\\' => 21,
         ),
         'k' => 
         array (
@@ -46,10 +45,6 @@ class ComposerStaticInit20170b83fab9ba3f9011310852163472
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
-        ),
-        'yidas\\yii2BowerAsset\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yidas/yii2-bower-asset',
         ),
         'klikar3\\rgraph\\' => 
         array (
@@ -668,34 +663,6 @@ class ComposerStaticInit20170b83fab9ba3f9011310852163472
         'SebastianBergmann\\ObjectReflector\\Exception' => __DIR__ . '/..' . '/sebastian/object-reflector/src/Exception.php',
         'SebastianBergmann\\ObjectReflector\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/object-reflector/src/InvalidArgumentException.php',
         'SebastianBergmann\\ObjectReflector\\ObjectReflector' => __DIR__ . '/..' . '/sebastian/object-reflector/src/ObjectReflector.php',
-        'SebastianBergmann\\PHPCPD\\Application' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CLI/Application.php',
-        'SebastianBergmann\\PHPCPD\\Arguments' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CLI/Arguments.php',
-        'SebastianBergmann\\PHPCPD\\ArgumentsBuilder' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CLI/ArgumentsBuilder.php',
-        'SebastianBergmann\\PHPCPD\\ArgumentsBuilderException' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Exceptions/ArgumentsBuilderException.php',
-        'SebastianBergmann\\PHPCPD\\CodeClone' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeClone.php',
-        'SebastianBergmann\\PHPCPD\\CodeCloneFile' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneFile.php',
-        'SebastianBergmann\\PHPCPD\\CodeCloneMap' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneMap.php',
-        'SebastianBergmann\\PHPCPD\\CodeCloneMapIterator' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneMapIterator.php',
-        'SebastianBergmann\\PHPCPD\\Detector\\Detector' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Detector.php',
-        'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\AbstractStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/AbstractStrategy.php',
-        'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\DefaultStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/DefaultStrategy.php',
-        'SebastianBergmann\\PHPCPD\\Exception' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Exceptions/Exception.php',
-        'SebastianBergmann\\PHPCPD\\Log\\AbstractXmlLogger' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/AbstractXmlLogger.php',
-        'SebastianBergmann\\PHPCPD\\Log\\PMD' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/PMD.php',
-        'SebastianBergmann\\PHPCPD\\Log\\Text' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/Text.php',
-        'SebastianBergmann\\PHPLOC\\Analyser' => __DIR__ . '/..' . '/phploc/phploc/src/Analyser.php',
-        'SebastianBergmann\\PHPLOC\\Application' => __DIR__ . '/..' . '/phploc/phploc/src/CLI/Application.php',
-        'SebastianBergmann\\PHPLOC\\Arguments' => __DIR__ . '/..' . '/phploc/phploc/src/CLI/Arguments.php',
-        'SebastianBergmann\\PHPLOC\\ArgumentsBuilder' => __DIR__ . '/..' . '/phploc/phploc/src/CLI/ArgumentsBuilder.php',
-        'SebastianBergmann\\PHPLOC\\ArgumentsBuilderException' => __DIR__ . '/..' . '/phploc/phploc/src/Exception/ArgumentsBuilderException.php',
-        'SebastianBergmann\\PHPLOC\\Collector' => __DIR__ . '/..' . '/phploc/phploc/src/Collector.php',
-        'SebastianBergmann\\PHPLOC\\Exception' => __DIR__ . '/..' . '/phploc/phploc/src/Exception/Exception.php',
-        'SebastianBergmann\\PHPLOC\\Log\\Csv' => __DIR__ . '/..' . '/phploc/phploc/src/Log/Csv.php',
-        'SebastianBergmann\\PHPLOC\\Log\\Json' => __DIR__ . '/..' . '/phploc/phploc/src/Log/Json.php',
-        'SebastianBergmann\\PHPLOC\\Log\\Text' => __DIR__ . '/..' . '/phploc/phploc/src/Log/Text.php',
-        'SebastianBergmann\\PHPLOC\\Log\\Xml' => __DIR__ . '/..' . '/phploc/phploc/src/Log/Xml.php',
-        'SebastianBergmann\\PHPLOC\\Publisher' => __DIR__ . '/..' . '/phploc/phploc/src/Publisher.php',
-        'SebastianBergmann\\PHPLOC\\RuntimeException' => __DIR__ . '/..' . '/phploc/phploc/src/Exception/RuntimeException.php',
         'SebastianBergmann\\RecursionContext\\Context' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Context.php',
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',

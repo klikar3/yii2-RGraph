@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'bb15c8840cd54b7cb163732a432b76ad9caaa58b',
         'name' => 'klikar3/yii2-rgraph',
         'dev' => true,
     ),
@@ -74,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'klikar3/yii2-rgraph' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'yii2-extension',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'bb15c8840cd54b7cb163732a432b76ad9caaa58b',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -125,15 +125,6 @@
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
             'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
-            'dev_requirement' => true,
-        ),
-        'phploc/phploc' => array(
-            'pretty_version' => '7.0.2',
-            'version' => '7.0.2.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../phploc/phploc',
-            'aliases' => array(),
-            'reference' => 'af0d5fc84f3f7725513ba59cdcbe670ac2a4532a',
             'dev_requirement' => true,
         ),
         'phpunit/php-code-coverage' => array(
@@ -298,15 +289,6 @@
             'reference' => 'b4f479ebdbf63ac605d183ece17d8d7fe49c15c7',
             'dev_requirement' => true,
         ),
-        'sebastian/phpcpd' => array(
-            'pretty_version' => '6.0.3',
-            'version' => '6.0.3.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../sebastian/phpcpd',
-            'aliases' => array(),
-            'reference' => 'f3683aa0db2e8e09287c2bb33a595b2873ea9176',
-            'dev_requirement' => true,
-        ),
         'sebastian/recursion-context' => array(
             'pretty_version' => '4.0.5',
             'version' => '4.0.5.0',
@@ -352,13 +334,13 @@
             'reference' => '34a41e998c2183e22995f158c581e7b5e755ab9e',
             'dev_requirement' => true,
         ),
-        'yidas/yii2-bower-asset' => array(
-            'pretty_version' => '2.0.13.1',
-            'version' => '2.0.13.1',
+        'yidas/yii2-composer-bower-skip' => array(
+            'pretty_version' => '2.0.13',
+            'version' => '2.0.13.0',
             'type' => 'yii2-extension',
-            'install_path' => __DIR__ . '/../yidas/yii2-bower-asset',
+            'install_path' => __DIR__ . '/../yidas/yii2-composer-bower-skip',
             'aliases' => array(),
-            'reference' => '056dd55087e0b945c01c91c99eb346ef6e28a42e',
+            'reference' => '1156ed4dc2ddca811bd2582d09e8885585fbd0cb',
             'dev_requirement' => false,
         ),
         'yiisoft/yii2' => array(
