@@ -14,7 +14,7 @@
         "phpunit/php-code-coverage": "*",
         "phploc/phploc": "*",
         "sebastian/phpcpd": "*",
-        "yidas/yii2-bower-asset": "*"
+        "yidas/yii2-bower-asset": "2.0.13.1"
     },
 	"autoload": {
 		"psr-4": {
