@@ -326,21 +326,6 @@
             "install-path": "../nikic/php-parser"
         },
         {
-            "name": "npm-asset/jquery",
-            "version": "3.7.0",
-            "version_normalized": "3.7.0.0",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/jquery/-/jquery-3.7.0.tgz"
-            },
-            "type": "npm-asset",
-            "installation-source": "dist",
-            "license": [
-                "MIT"
-            ],
-            "install-path": "../npm-asset/jquery"
-        },
-        {
             "name": "paragonie/random_compat",
             "version": "v9.99.100",
             "version_normalized": "9.99.100.0",
