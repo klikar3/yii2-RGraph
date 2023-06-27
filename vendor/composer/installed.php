@@ -5,7 +5,7 @@
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b4c5759ced99eae4acf07ed180b9253b136db617',
+        'reference' => '9862bbd4d5deb58b9e3cc124bcf5dbe3e04b1580',
         'name' => 'klikar3/yii2-rgraph',
         'dev' => true,
     ),
@@ -79,7 +79,7 @@
             'type' => 'yii2-extension',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b4c5759ced99eae4acf07ed180b9253b136db617',
+            'reference' => '9862bbd4d5deb58b9e3cc124bcf5dbe3e04b1580',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -99,15 +99,6 @@
             'aliases' => array(),
             'reference' => '19526a33fb561ef417e822e85f08a00db4059c17',
             'dev_requirement' => true,
-        ),
-        'npm-asset/jquery' => array(
-            'pretty_version' => '3.7.0',
-            'version' => '3.7.0.0',
-            'type' => 'npm-asset',
-            'install_path' => __DIR__ . '/../npm-asset/jquery',
-            'aliases' => array(),
-            'reference' => NULL,
-            'dev_requirement' => false,
         ),
         'paragonie/random_compat' => array(
             'pretty_version' => 'v9.99.100',
