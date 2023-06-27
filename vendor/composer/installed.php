@@ -5,55 +5,46 @@
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f7e5f408714837fef5aff56e88370462bb298674',
+        'reference' => 'b4c5759ced99eae4acf07ed180b9253b136db617',
         'name' => 'klikar3/yii2-rgraph',
         'dev' => true,
     ),
     'versions' => array(
         'bower-asset/bootstrap' => array(
-            'pretty_version' => 'v3.4.1',
-            'version' => '3.4.1.0',
-            'type' => 'bower-asset',
-            'install_path' => __DIR__ . '/../bower-asset/bootstrap',
-            'aliases' => array(),
-            'reference' => '68b0d231a13201eb14acd3dc84e51543d16e5f7e',
             'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
         ),
         'bower-asset/inputmask' => array(
-            'pretty_version' => '3.3.11',
-            'version' => '3.3.11.0',
-            'type' => 'bower-asset',
-            'install_path' => __DIR__ . '/../bower-asset/inputmask',
-            'aliases' => array(),
-            'reference' => '5e670ad62f50c738388d4dcec78d2888505ad77b',
             'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
         ),
         'bower-asset/jquery' => array(
-            'pretty_version' => '3.6.4',
-            'version' => '3.6.4.0',
-            'type' => 'bower-asset',
-            'install_path' => __DIR__ . '/../bower-asset/jquery',
-            'aliases' => array(),
-            'reference' => '91ef2d8836342875f2519b5815197ea0f23613cf',
             'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
         ),
         'bower-asset/punycode' => array(
-            'pretty_version' => 'v1.3.2',
-            'version' => '1.3.2.0',
-            'type' => 'bower-asset',
-            'install_path' => __DIR__ . '/../bower-asset/punycode',
-            'aliases' => array(),
-            'reference' => '38c8d3131a82567bfef18da09f7f4db68c84f8a3',
             'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'bower-asset/typeahead.js' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
         ),
         'bower-asset/yii2-pjax' => array(
-            'pretty_version' => '2.0.8',
-            'version' => '2.0.8.0',
-            'type' => 'bower-asset',
-            'install_path' => __DIR__ . '/../bower-asset/yii2-pjax',
-            'aliases' => array(),
-            'reference' => 'a9298d57da63d14a950f1b94366a864bc62264fb',
             'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
         ),
         'cebe/markdown' => array(
             'pretty_version' => '1.2.1',
@@ -88,7 +79,7 @@
             'type' => 'yii2-extension',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f7e5f408714837fef5aff56e88370462bb298674',
+            'reference' => 'b4c5759ced99eae4acf07ed180b9253b136db617',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
@@ -110,8 +101,8 @@
             'dev_requirement' => true,
         ),
         'npm-asset/jquery' => array(
-            'pretty_version' => '2.2.4',
-            'version' => '2.2.4.0',
+            'pretty_version' => '3.7.0',
+            'version' => '3.7.0.0',
             'type' => 'npm-asset',
             'install_path' => __DIR__ . '/../npm-asset/jquery',
             'aliases' => array(),
@@ -351,6 +342,15 @@
             'aliases' => array(),
             'reference' => '34a41e998c2183e22995f158c581e7b5e755ab9e',
             'dev_requirement' => true,
+        ),
+        'yidas/yii2-bower-asset' => array(
+            'pretty_version' => '2.0.13.1',
+            'version' => '2.0.13.1',
+            'type' => 'yii2-extension',
+            'install_path' => __DIR__ . '/../yidas/yii2-bower-asset',
+            'aliases' => array(),
+            'reference' => '056dd55087e0b945c01c91c99eb346ef6e28a42e',
+            'dev_requirement' => false,
         ),
         'yiisoft/yii2' => array(
             'pretty_version' => '2.0.48.1',
