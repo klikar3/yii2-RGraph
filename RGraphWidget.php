@@ -32,7 +32,7 @@ abstract class RGraphWidget extends Widget
 	public $allowZoom = false;
   public $allowKeys = false;
 
-	public $drawFunction = 'Draw()';
+	public $drawFunction = 'draw()';
 
 	/**
 	 * @var array
@@ -118,7 +118,7 @@ abstract class RGraphWidget extends Widget
 		$options = $this->encodeOptions($this->options);
 		if (is_array($options)) {
 			foreach ($options as $index => $value) {
-				$result[] = "{$varId}.Set('$index',$value);";
+				$result[] = "{$varId}.set('$index',$value);";
 			}
 		}
 		return implode("\n", $result);
