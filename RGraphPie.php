@@ -38,9 +38,9 @@ class RGraphPie extends RGraphWidget
 		parent::run();
 		$id = 'Pie' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Pie('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Pie({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
 	  $view = $this->getView();
 		$view->registerJs($script);  

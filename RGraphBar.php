@@ -44,9 +44,9 @@ class RGraphBar extends RGraphWidget
 		
 		$jid = "{$id}";
 //		$script = ";var $jid = new RGraph.Bar('{$id}',{$data});";
-		$script = "var $jid = new RGraph.Bar('{$this->getId()}',{$data});";
+		$script = "var $jid = new RGraph.Bar({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($jid);
-		$script .= "{$jid}.{$this->drawFunction};";
+		$script .= "\n{$jid}.{$this->drawFunction};";
 //      $script = ";var Bar_{$id} = new RGraph.Bar({id:'{$id}',data: {$data},options: {$options}}).draw();";
 
 	  $view = $this->getView();

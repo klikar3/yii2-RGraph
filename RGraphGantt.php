@@ -38,11 +38,11 @@ class RGraphGantt extends RGraphWidget
 		parent::run();
 		$id = 'Gantt' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Gantt('{$this->getId()}');";
+		$script = "var $id = new RGraph.Gantt({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }
