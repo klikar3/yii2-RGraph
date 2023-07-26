@@ -5,7 +5,7 @@
         'type' => 'yii2-extension',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9862bbd4d5deb58b9e3cc124bcf5dbe3e04b1580',
+        'reference' => 'b28b30a907b8dc55f7426c9310438cbce931df3d',
         'name' => 'klikar3/yii2-rgraph',
         'dev' => true,
     ),
@@ -79,7 +79,7 @@
             'type' => 'yii2-extension',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9862bbd4d5deb58b9e3cc124bcf5dbe3e04b1580',
+            'reference' => 'b28b30a907b8dc55f7426c9310438cbce931df3d',
             'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(

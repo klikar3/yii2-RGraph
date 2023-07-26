@@ -38,11 +38,11 @@ class RGraphScatter extends RGraphWidget
 		parent::run();
 		$id = 'Scatter' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Scatter('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Scatter({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }

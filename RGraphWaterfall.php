@@ -38,11 +38,11 @@ class RGraphWaterfall extends RGraphWidget
 		parent::run();
 		$id = 'Waterfall' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Waterfall('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Waterfall({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }

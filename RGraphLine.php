@@ -39,9 +39,9 @@ class RGraphLine extends RGraphWidget
 		parent::run();
 		$id = 'Line' . $this->getId();
 		$data = !empty($this->data) ? Json::encode($this->data,JSON_NUMERIC_CHECK) : '{}';
-		$script = "var $id = new RGraph.Line('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Line({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
 		$view = $this->getView();
 		$view->registerJs($script);  

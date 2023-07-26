@@ -156,8 +156,8 @@ abstract class RGraphWidget extends Widget
 			$this->registerScriptFile('RGraph.common.dynamic.js');
 		if ($this->allowEffects)
 			$this->registerScriptFile('RGraph.common.effects.js');
-		if ($this->allowResizing)
-			$this->registerScriptFile('RGraph.common.resizing.js');
+//		if ($this->allowResizing)
+//			$this->registerScriptFile('RGraph.common.resizing.js');
 		if ($this->allowTooltips)
 			$this->registerScriptFile('RGraph.common.tooltips.js');
 		if ($this->allowZoom)

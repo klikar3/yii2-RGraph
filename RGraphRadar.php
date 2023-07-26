@@ -38,11 +38,11 @@ class RGraphRadar extends RGraphWidget
 		parent::run();
 		$id = 'Radar' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Radar('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Radar({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }

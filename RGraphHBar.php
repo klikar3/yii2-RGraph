@@ -38,9 +38,9 @@ class RGraphHBar extends RGraphWidget
 		parent::run();
 		$id = 'HBar' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.HBar('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.HBar({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
 	  $view = $this->getView();
 		$view->registerJs($script);  

@@ -38,11 +38,11 @@ class RGraphLED extends RGraphWidget
 		parent::run();
 		$id = 'LED' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.LED('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.LED({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }

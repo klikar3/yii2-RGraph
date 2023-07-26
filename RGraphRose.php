@@ -38,11 +38,11 @@ class RGraphRose extends RGraphWidget
 		parent::run();
 		$id = 'Rose' . $this->getId();
 		$data = Json::encode($this->data);
-		$script = "var $id = new RGraph.Rose('{$this->getId()}',{$data});";
+		$script = "var $id = new RGraph.Rose({id: '{$this->getId()}', data: {$data}});\n";
 		$script .= $this->getEncodedOptions($id);
-		$script .= "{$id}.{$this->drawFunction};";
+		$script .= "\n{$id}.{$this->drawFunction};";
 
-	  $view = $this->getView();
+	    $view = $this->getView();
 		$view->registerJs($script);  
 	}
 }
