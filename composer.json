@@ -7,9 +7,7 @@
     "license": "LGPL-3.0-or-later",
 	"require": {
 		"php": ">=7.4.0",
-        "yiisoft/yii2": ">=2.0.38",
-        "yidas/yii2-bower-asset": "2.0.13.1",
-        "bower-asset/bootstrap": "^3.3"
+        "yiisoft/yii2": ">=2.0.38"
 	},
   "require-dev": {
         "phpunit/phpunit": "*", 

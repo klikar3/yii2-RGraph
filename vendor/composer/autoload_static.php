@@ -17,7 +17,6 @@ class ComposerStaticInit20170b83fab9ba3f9011310852163472
         array (
             'yii\\composer\\' => 13,
             'yii\\' => 4,
-            'yidas\\yii2BowerAsset\\' => 21,
         ),
         'k' => 
         array (
@@ -46,10 +45,6 @@ class ComposerStaticInit20170b83fab9ba3f9011310852163472
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
-        ),
-        'yidas\\yii2BowerAsset\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yidas/yii2-bower-asset',
         ),
         'klikar3\\rgraph\\' => 
         array (
